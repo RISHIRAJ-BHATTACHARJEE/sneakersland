@@ -9,6 +9,7 @@ pnpm-debug.log*
 
 # === Environment Variables ===
 **/.env
+*/.env
 .env
 
 # === Logs ===
