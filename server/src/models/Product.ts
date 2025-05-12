@@ -5,8 +5,8 @@ interface IProduct extends Document {
   description: string;
   price: number;
   category: string;
-  stock: number;
   imageUrl: string;
+  stock: number;
   ratings: number;
 }
 

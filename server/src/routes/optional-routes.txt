@@ -1,0 +1,4 @@
+| Method | Route              | Description           |
+| ------ | ------------------ | --------------------- |
+| GET    | `/api/status`      | Health check route    |
+| GET    | `/api/admin/stats` | Admin dashboard stats |
