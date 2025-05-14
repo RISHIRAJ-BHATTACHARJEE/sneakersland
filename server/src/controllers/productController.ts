@@ -221,6 +221,35 @@ export const updateProduct = async (
 
 // Delete Product
 export const deleteProduct = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
-): Promise<void> => {};
+): Promise<void> => {
+    try {
+        const { id } = req.params;
+    
+        // Validate the product ID format
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+          res.status(400).json({ message: "Invalid product ID format" });
+          return;
+        }
+    
+        // Check if the product exists
+        const product = await Product.findById(id);
+    
+        if (!product) {
+          res.status(404).json({ message: "Product not found" });
+          return;
+        }
+    
+        // Optional: Log which admin deleted the product (if needed for auditing)
+        console.log(`Product "${product.name}" deleted by admin ID: ${req.user?.id}`);
+    
+        // Delete the product
+        await product.deleteOne();
+    
+        res.status(200).json({ message: "Product deleted successfully", productId: id });
+      } catch (error) {
+        console.error("Error deleting product:", error);
+        res.status(500).json({ message: "Internal server error" });
+      }
+};

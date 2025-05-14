@@ -7,6 +7,8 @@ import userRouter from "./routes/user.route";
 import cookieParser from "cookie-parser";
 import authRouter from "./routes/auth.route";
 import productRouter from "./routes/product.route";
+import cartRouter from "./routes/cart.route";
+import orderRouter from "./routes/order.routes";
 
 dotenv.config();
 
@@ -25,6 +27,8 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/orders", orderRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

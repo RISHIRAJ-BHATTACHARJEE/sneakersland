@@ -13,7 +13,7 @@ productRouter.get("/:id", getProduct);
 //Admin Routes
 productRouter.post("/create", authenticateUser, authorizeRoles("admin"), upload.single("image"), createProduct);
 productRouter.put("/update/:id", authenticateUser, authorizeRoles("admin"), updateProduct);
-productRouter.delete("/:id", authenticateUser, authorizeRoles("admin"), deleteProduct);
+productRouter.delete("/delete/:id", authenticateUser, authorizeRoles("admin"), deleteProduct);
 
 
 export default productRouter;

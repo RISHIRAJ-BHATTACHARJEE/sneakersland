@@ -34,3 +34,12 @@ export const getAllProductsSchema = z.object({
   category: z.string().optional(),
   search: z.string().optional(),
 });
+
+export const updateCartSchema = z.object({
+  items: z.array(
+    z.object({
+      productId: z.string().min(1, "Product ID is required"),
+      quantity: z.number().int().min(0, "Quantity must be 0 or more"),
+    })
+  ),
+});
