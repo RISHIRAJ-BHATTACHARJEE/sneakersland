@@ -9,6 +9,7 @@ import authRouter from "./routes/auth.route";
 import productRouter from "./routes/product.route";
 import cartRouter from "./routes/cart.route";
 import orderRouter from "./routes/order.routes";
+// import paymentRouter from "./routes/payment.routes";
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/orders", orderRouter);
+// app.use("/api/payment", paymentRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

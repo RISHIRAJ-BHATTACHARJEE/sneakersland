@@ -37,17 +37,15 @@ const orderSchema: Schema<IOrder> = new Schema(
       type: Number,
       required: true,
     },
-    orderDate: {
-      type: Date,
-      default: Date.now,
-    },
     shippingAddress: {
-      type: String,
-      required: true,
-    },
-    status: {
-      type: String,
-      default: "pending",
+      fullName: String,
+      addressLine1: String,
+      addressLine2: String,
+      city: String,
+      state: String,
+      postalCode: String,
+      country: String,
+      phone: String,
     },
   },
   { timestamps: true }

@@ -1,20 +1,41 @@
 import { Router } from "express";
 import { authenticateUser } from "../middlewares/auth";
 import { authorizeRoles } from "../middlewares/authorize";
-import { getAllOrders, getMyOrders, getOrderById, getUserOrders, placeOrder, updateOrderStatus } from "../controllers/orderController";
+import {
+  getAllOrders,
+  getMyOrders,
+  getOrderById,
+  getUserOrders,
+  placeOrder,
+  updateOrderStatus,
+} from "../controllers/orderController";
 
 const orderRouter = Router();
+
+//Admin Routes
+orderRouter.get(
+  "/all",
+  authenticateUser,
+  authorizeRoles("admin"),
+  getAllOrders
+);
+orderRouter.get(
+  "/user/:id",
+  authenticateUser,
+  authorizeRoles("admin"),
+  getUserOrders
+);
+orderRouter.put(
+  "/:id",
+  authenticateUser,
+  authorizeRoles("admin"),
+  updateOrderStatus
+);
 
 //User Routes
 orderRouter.post("/", authenticateUser, placeOrder);
 orderRouter.get("/", authenticateUser, getMyOrders);
 orderRouter.get("/:id", authenticateUser, getOrderById);
-
-//Admin Routes
-orderRouter.get("/all", authenticateUser, authorizeRoles("admin"), getAllOrders);
-orderRouter.get("/user/:id", authenticateUser, authorizeRoles("admin"), getUserOrders);
-orderRouter.put("/:id", authenticateUser, authorizeRoles("admin"), updateOrderStatus);
-
 
 export default orderRouter;
 

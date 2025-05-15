@@ -84,7 +84,14 @@ export const getOrderById = async (
       return;
     }
 
-    if (!isAdmin && order.user.toString() !== userId) {
+    const orderUserId =
+      typeof order.user === "object" &&
+      order.user !== null &&
+      "_id" in order.user
+        ? (order.user as any)._id.toString()
+        : order.user.toString();
+
+    if (!isAdmin && orderUserId !== userId) {
       res.status(403).json({ message: "Access denied" });
       return;
     }
@@ -142,7 +149,7 @@ export const getUserOrders = async (
   res: Response
 ): Promise<void> => {
   try {
-    const { userId } = req.params;
+    const { id: userId } = req.params;
 
     const orders = await Order.find({ user: userId })
       .populate("products.product", "name price imageUrl")
