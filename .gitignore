@@ -22,8 +22,8 @@ logs
 Thumbs.db
 
 # === Vite ===
-frontend/.vite
-frontend/.cache
+client/.vite
+client/.cache
 
 # === TypeScript ===
 **/*.tsbuildinfo
@@ -34,7 +34,7 @@ frontend/.cache
 *.sw?
 
 # === Output ===
-backend/dist
-frontend/dist
+server/dist
+client/dist
 
 /docs
