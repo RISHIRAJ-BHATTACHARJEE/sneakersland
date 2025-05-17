@@ -11,7 +11,7 @@ const SneakerCategoryCard = ({
 
   return (
     <div
-      className={`bg-white pb-3 flex flex-col items-center border-8 border-zinc-400 justify-between ${
+      className={`bg-white pb-3 flex flex-col items-center border-8 border-[#FFA52F]/70 justify-between ${
         isLeft
           ? "ml-16 rounded-bl-3xl rounded-tl-[72px]"
           : "mr-16 rounded-br-3xl rounded-tr-[72px]"
