@@ -1,32 +1,128 @@
-export const slides = [
+export const newDrops = [
   {
-    image: "/carousel-1.jpg",
-    text: "Air Max Pro 2024",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quaerat officia inventore mollitia architecto cum temporibus numquam. Ratione, facilis eaque cupiditate mollitia necessitatibus dolor repudiandae omnis, harum optio qui minima?",
+    image: "/products/Airforce-1.jpg",
+    name: "NIKE AIRFORCE 1",
+    price: 1260,
   },
   {
-    image: "/carousel-2.jpg",
-    text: "Nike Zoom Fly",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quaerat officia inventore mollitia architecto cum temporibus numquam. Ratione, facilis eaque cupiditate mollitia necessitatibus dolor repudiandae omnis, harum optio qui minima?",
+    image: "/products/SB-Dunk-Yuto.jpg",
+    name: "NIKE SB DUNK YUTO",
+    price: 1260,
   },
   {
-    image: "/carousel-3.jpg",
-    text: "Adidas Ultraboost",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quaerat officia inventore mollitia architecto cum temporibus numquam. Ratione, facilis eaque cupiditate mollitia necessitatibus dolor repudiandae omnis, harum optio qui minima?",
+    image: "/products/SB-Dunk-Yuto.jpg",
+    name: "NIKE SB DUNK YUTO",
+    price: 1260,
   },
   {
-    image: "/carousel-4.jpg",
-    text: "Puma Street Runner",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quaerat officia inventore mollitia architecto cum temporibus numquam. Ratione, facilis eaque cupiditate mollitia necessitatibus dolor repudiandae omnis, harum optio qui minima?",
+    image: "/products/Airforce-1.jpg",
+    name: "NIKE AIRFORCE 1",
+    price: 1260,
   },
   {
-    image: "/carousel-5.jpg",
-    text: "Reebok Classic",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quaerat officia inventore mollitia architecto cum temporibus numquam. Ratione, facilis eaque cupiditate mollitia necessitatibus dolor repudiandae omnis, harum optio qui minima?",
+    image: "/products/Airforce-1.jpg",
+    name: "NIKE AIRFORCE 1",
+    price: 1260,
+  },
+  {
+    image: "/products/SB-Dunk-Yuto.jpg",
+    name: "NIKE SB DUNK YUTO",
+    price: 1260,
+  },
+]
+
+
+export interface SneakerCategoryProps {
+  id: number;
+  label: string;
+  image: string;
+  imageAlt: string;
+  align: "left" | "right";
+}
+
+export const categories: SneakerCategoryProps[] = [
+  {
+    id: 1
+,    label: "HIGH TOPS",
+    image: "/products/high-tops.jpg",
+    imageAlt: "high-tops",
+    align: "left",
+  },
+  {
+    id: 2
+,    label: "MID TOPS",
+    image: "/products/mid-tops.jpg",
+    imageAlt: "mid-tops",
+    align: "right",
+  },
+  {
+    id: 3
+,    label: "LOW TOPS",
+    image: "/products/low-tops.jpg",
+    imageAlt: "low-tops",
+    align: "left",
+  },
+  {
+    id: 4
+,    label: "CLASSIC\nSNEAKERS",
+    image: "/products/classic-sneakers.jpg",
+    imageAlt: "classic-sneakers",
+    align: "right",
+  },
+  {
+    id: 5
+,    label: "PLATFORM SNEAKERS",
+    image: "/products/platform-sneakers.jpg",
+    imageAlt: "platform-sneakers",
+    align: "left",
+  },
+  {
+    id: 6
+,    label: "LEATHER SNEAKERS",
+    image: "/products/leather-sneakers.jpg",
+    imageAlt: "leather-sneakers",
+    align: "right",
+  },
+  {
+    id: 7
+,    label: "CANVAS SNEAKERS",
+    image: "/products/canvas-sneakers.jpg",
+    imageAlt: "canvas-sneakers",
+    align: "left",
+  },
+  {
+    id: 8
+,    label: "MESH\nSNEAKERS",
+    image: "/products/mesh-sneakers.jpg",
+    imageAlt: "mesh-sneakers",
+    align: "right",
+  },
+  {
+    id: 9
+,    label: "SUEDE\n SNEAKERS",
+    image: "/products/suede-sneakers.jpg",
+    imageAlt: "suede-sneakers",
+    align: "left",
+  },
+  {
+    id: 10,
+    label: "KNIT SNEAKERS",
+    image: "/products/knit-sneakers.jpg",
+    imageAlt: "knit-sneakers",
+    align: "right",
+  },
+  {
+    id: 11,
+    label: "HIGH TOPS",
+    image: "/products/high-tops.jpg",
+    imageAlt: "high-tops",
+    align: "left",
+  },
+  {
+    id: 12,
+    label: "MID TOPS",
+    image: "/products/mid-tops.jpg",
+    imageAlt: "mid-tops",
+    align: "right",
   },
 ];
