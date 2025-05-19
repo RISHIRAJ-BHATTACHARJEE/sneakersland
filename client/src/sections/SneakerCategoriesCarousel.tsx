@@ -67,7 +67,7 @@ const SneakerCategoriesCarousel = () => {
   };
 
   return (
-    <div className="bg-[#232321] w-full py-6">
+    <div className="bg-gradient-to-t from-slate-400 to-slate-900 w-full pt-6 pb-12">
       <div className="flex items-center justify-between py-4 pl-7 pr-3">
         <h2 className="font-bold text-gray-300 text-3xl">CATEGORIES</h2>
         <div className="flex gap-1">
@@ -99,6 +99,7 @@ const SneakerCategoriesCarousel = () => {
                 custom={{ direction, index }}
                 variants={variants}
                 transition={{ duration: 0.6 }}
+                className="my-3"
               >
                 <SneakerCategoryCard {...cat} />
               </motion.div>

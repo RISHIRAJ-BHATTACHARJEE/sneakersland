@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProductCard";
+import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
 import { newDrops } from "@/lib/constants";
 import SneakerCategoriesCarousel from "@/sections/SneakerCategoriesCarousel";
@@ -11,57 +12,75 @@ const Home = () => {
       </h1>
 
       {/* Hero Image */}
-      <div className="relative flex items-center justify-center mx-auto">
-        <img src="/hero-1.png" alt="hero-1" className="w-8/9 object-cover" />
-
-        {/* Vertical label on the left */}
-        <h2 className="bg-[#232321] text-white absolute left-[-48px] top-[100px] text-xs tracking-wider -rotate-90 p-2 rounded-b-md">
-          Nike product of the year
-        </h2>
-
-        {/* Text block on bottom-left */}
-        <div className="absolute bottom-6 left-10 flex flex-col gap-3">
-          <h2 className="text-2xl leading-4 italic text-white font-semibold">
-            NIKE AIR MAX
+      <div
+        className="w-[350px] min-h-[373px] bg-cover bg-center flex flex-col justify-end mb-8"
+        style={{ backgroundImage: "url('/hero-1.png')" }}
+      >
+        <div className="self-start ml-[-71px] mb-[72px]">
+          <h2 className="bg-[#232321] text-white text-xs tracking-wider -rotate-90 p-2 rounded-b-md">
+            Nike product of the year
           </h2>
-          <p className="leading-4 w-[200px] text-zinc-300 font-light text-sm">
-            Nike introducing the new air max for everyone's comfort
-          </p>
-          <Button size="sm" className="w-fit">
-            SHOP NOW
-          </Button>
         </div>
-
-        {/* Sub images on bottom-right */}
-        <div className="absolute flex flex-col gap-2 right-10 bottom-6">
-          <img src="/sub-hero-1.png" alt="sub-hero-1" className="w-14 h-14" />
-          <img src="/sub-hero-2.png" alt="sub-hero-2" className="w-14 h-14" />
+        {/* Content container */}
+        <div className="w-full flex justify-between items-end">
+          {/* Left text block */}
+          <div className="flex flex-col gap-3 m-5">
+            <h2 className="text-2xl leading-4 italic text-white font-semibold">
+              NIKE AIR MAX
+            </h2>
+            <p className="leading-4 w-[200px] text-zinc-300 font-light text-sm">
+              Nike introducing the new air max for everyone's comfort
+            </p>
+            <Button size="sm" className="w-fit">
+              SHOP NOW
+            </Button>
+          </div>
+          {/* Right sub-images */}
+          <div className="flex flex-col gap-2 m-5">
+            <img src="/sub-hero-1.png" alt="sub-hero-1" className="w-14 h-14" />
+            <img src="/sub-hero-2.png" alt="sub-hero-2" className="w-14 h-14" />
+          </div>
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-5 mx-6 pt-12">
-        <h2 className="font-bold text-lg leading-5 py-8">
-          Don't miss out new drops
-        </h2>
-        <Button className="uppercase">Shop new drops</Button>
-      </div>
+      <div className="bg-gradient-to-t from-amber-400 to-zinc-200">
+        <div className="flex items-center justify-center gap-5 mx-6 pt-12">
+          <h2 className="font-bold text-lg leading-5 py-8">
+            Don't miss out new drops
+          </h2>
+          <Button className="uppercase">Shop new drops</Button>
+        </div>
 
-      {/* Product Card Grid */}
-      <div className="grid grid-cols-2 gap-5 pb-14">
-        {newDrops.map((item, index) => {
-          return (
-            <ProductCard
-              image={item.image}
-              name={item.name}
-              price={item.price}
-              key={index}
-            />
-          );
-        })}
+        {/* Product Card Grid */}
+        <div className="grid grid-cols-2 gap-5 px-6 mb-10">
+          {newDrops.map((item, index) => {
+            return (
+              <ProductCard
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
 
       {/* Categories */}
-      <SneakerCategoriesCarousel/>
+      <SneakerCategoriesCarousel />
+
+      {/* Reviews */}
+      <div className="w-full py-6">
+        <div className="flex items-center justify-between p-4">
+          <h2 className="uppercase text-3xl font-semibold">Reviews</h2>
+          <Button>SEE ALL</Button>
+        </div>
+        <div className="flex flex-col">
+          {[1, 2].map((_, idx) => (
+            <TestimonialCard key={idx} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -5,13 +5,18 @@ export const newDrops = [
     price: 1260,
   },
   {
-    image: "/products/SB-Dunk-Yuto.jpg",
-    name: "NIKE SB DUNK YUTO",
+    image: "/products/Jordan-4-Coffee-Mocha.jpg",
+    name: "Jordan 4 Coffee Mocha",
     price: 1260,
   },
   {
-    image: "/products/SB-Dunk-Yuto.jpg",
-    name: "NIKE SB DUNK YUTO",
+    image: "/products/Jordan-4-Pine-Green-RM.jpg",
+    name: "Jordan 4 Pine Green RM",
+    price: 1260,
+  },
+  {
+    image: "/products/Dunk-A896.jpg",
+    name: "Dunk A896",
     price: 1260,
   },
   {
@@ -20,13 +25,8 @@ export const newDrops = [
     price: 1260,
   },
   {
-    image: "/products/Airforce-1.jpg",
-    name: "NIKE AIRFORCE 1",
-    price: 1260,
-  },
-  {
-    image: "/products/SB-Dunk-Yuto.jpg",
-    name: "NIKE SB DUNK YUTO",
+    image: "/products/Sb-Dunk-X-Coca-Cola.jpg",
+    name: "Sb Dunk X Coca Cola",
     price: 1260,
   },
 ]
@@ -44,7 +44,7 @@ export const categories: SneakerCategoryProps[] = [
   {
     id: 1
 ,    label: "HIGH TOPS",
-    image: "/products/high-tops.jpg",
+    image: "/products/high-tops.png",
     imageAlt: "high-tops",
     align: "left",
   },
@@ -114,7 +114,7 @@ export const categories: SneakerCategoryProps[] = [
   {
     id: 11,
     label: "HIGH TOPS",
-    image: "/products/high-tops.jpg",
+    image: "/products/high-tops.png",
     imageAlt: "high-tops",
     align: "left",
   },
