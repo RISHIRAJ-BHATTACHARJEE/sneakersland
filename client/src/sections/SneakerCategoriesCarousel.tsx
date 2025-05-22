@@ -68,17 +68,19 @@ const SneakerCategoriesCarousel = () => {
 
   return (
     <div className="bg-gradient-to-t from-slate-400 to-slate-900 w-full pt-6 pb-12">
-      <div className="flex items-center justify-between py-4 pl-7 pr-3">
-        <h2 className="font-bold text-gray-300 text-3xl">CATEGORIES</h2>
-        <div className="flex gap-1">
+      <div className="flex items-center justify-between py-4 pl-7 pr-3 md:my-6">
+        <h2 className="font-bold text-gray-300 text-3xl md:text-5xl">CATEGORIES</h2>
+        <div className="flex gap-1 md:gap-3">
           <button onClick={handlePrev} disabled={page === 0}>
-            <FiArrowLeftCircle size={36} fill="#ffffff" strokeWidth={1} />
+            <FiArrowLeftCircle className="md:hidden" size={36} fill="#ffffff" strokeWidth={1} />
+            <FiArrowLeftCircle className="hidden md:block" size={46} fill="#ffffff" strokeWidth={1} />
           </button>
           <button
             onClick={handleNext}
             disabled={(page + 1) * itemsPerPage >= categories.length}
           >
-            <FiArrowRightCircle size={36} fill="#ffffff" strokeWidth={1} />
+            <FiArrowRightCircle className="md:hidden" size={36} fill="#ffffff" strokeWidth={1} />
+            <FiArrowRightCircle className="hidden md:block" size={46} fill="#ffffff" strokeWidth={1} />
           </button>
         </div>
       </div>

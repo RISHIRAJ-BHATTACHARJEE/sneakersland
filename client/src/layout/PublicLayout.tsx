@@ -4,8 +4,10 @@ import { Outlet } from "react-router-dom";
 
 const PublicLayout = () => {
   return (
-    <div className="w-screen flex flex-col items-center justify-between">
-      <Header />
+    <div className="w-full flex flex-col items-center justify-between">
+      <div className="w-full px-3 md:px-5">
+        <Header />
+      </div>
       <main>
         <Outlet />
       </main>
